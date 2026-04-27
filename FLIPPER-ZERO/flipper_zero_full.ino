@@ -51,6 +51,20 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 RF24 radio(CE_PIN, CSN_PIN);
 bool nrf24Present = false;
 
+const int wifiFrequencies[] = {
+  2412,
+  2417,
+  2422,
+  2427,
+  2432,
+  2437,
+  2442,
+  2447,
+  2452,
+  2457,
+  2462
+};
+
 // ==================== Data Structures ====================
 struct WiFiNetwork {
   String ssid;
